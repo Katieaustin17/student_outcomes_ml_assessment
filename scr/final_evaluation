@@ -1,0 +1,348 @@
+from pathlib import Path
+from time import perf_counter
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from sklearn.compose import ColumnTransformer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    ConfusionMatrixDisplay,
+    f1_score,
+    precision_score,
+    recall_score,
+)
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+
+
+# ---------------------------------------------------------
+# Project folders
+# ---------------------------------------------------------
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+DATA_PATH = (
+    PROJECT_ROOT
+    / "data"
+    / "raw"
+    / "student_outcomes.csv"
+)
+
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
+FIGURES_DIR = OUTPUT_DIR / "figures"
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+
+
+# ---------------------------------------------------------
+# Load dataset
+# ---------------------------------------------------------
+
+df = pd.read_csv(DATA_PATH)
+
+
+# ---------------------------------------------------------
+# Remove second-semester variables
+#
+# Prediction point = end of first semester.
+# ---------------------------------------------------------
+
+second_semester_features = [
+    "Curricular units 2nd sem (credited)",
+    "Curricular units 2nd sem (enrolled)",
+    "Curricular units 2nd sem (evaluations)",
+    "Curricular units 2nd sem (approved)",
+    "Curricular units 2nd sem (grade)",
+    "Curricular units 2nd sem (without evaluations)",
+]
+
+df_model = df.drop(columns=second_semester_features)
+
+
+# ---------------------------------------------------------
+# Predictors and target
+# ---------------------------------------------------------
+
+X = df_model.drop(columns="Target")
+y = df_model["Target"]
+
+
+# ---------------------------------------------------------
+# Reproduce original train/test split
+# ---------------------------------------------------------
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.20,
+    random_state=42,
+    stratify=y,
+)
+
+
+# ---------------------------------------------------------
+# Feature groups
+# ---------------------------------------------------------
+
+categorical_features = [
+    "Marital Status",
+    "Application mode",
+    "Course",
+    "Previous qualification",
+    "Nacionality",
+    "Mother's qualification",
+    "Father's qualification",
+    "Mother's occupation",
+    "Father's occupation",
+]
+
+binary_features = [
+    "Daytime/evening attendance",
+    "Displaced",
+    "Educational special needs",
+    "Debtor",
+    "Tuition fees up to date",
+    "Gender",
+    "Scholarship holder",
+    "International",
+]
+
+numerical_features = [
+    "Application order",
+    "Previous qualification (grade)",
+    "Admission grade",
+    "Age at enrollment",
+    "Curricular units 1st sem (credited)",
+    "Curricular units 1st sem (enrolled)",
+    "Curricular units 1st sem (evaluations)",
+    "Curricular units 1st sem (approved)",
+    "Curricular units 1st sem (grade)",
+    "Curricular units 1st sem (without evaluations)",
+    "Unemployment rate",
+    "Inflation rate",
+    "GDP",
+]
+
+
+# ---------------------------------------------------------
+# Preprocessing
+# ---------------------------------------------------------
+
+preprocessor = ColumnTransformer(
+    transformers=[
+        (
+            "categorical",
+            OneHotEncoder(handle_unknown="ignore"),
+            categorical_features,
+        ),
+        (
+            "numerical",
+            StandardScaler(),
+            numerical_features,
+        ),
+        (
+            "binary",
+            "passthrough",
+            binary_features,
+        ),
+    ]
+)
+
+
+# ---------------------------------------------------------
+# Final selected model
+# ---------------------------------------------------------
+
+final_model = Pipeline(
+    steps=[
+        ("preprocessor", preprocessor),
+        (
+            "classifier",
+            LogisticRegression(
+                C=1,
+                max_iter=2000,
+                random_state=42,
+            ),
+        ),
+    ]
+)
+
+
+# ---------------------------------------------------------
+# Fit final model using full training set
+# ---------------------------------------------------------
+
+start_train = perf_counter()
+
+final_model.fit(X_train, y_train)
+
+training_time = perf_counter() - start_train
+
+
+# ---------------------------------------------------------
+# Predict the untouched test set
+# ---------------------------------------------------------
+
+start_predict = perf_counter()
+
+y_pred = final_model.predict(X_test)
+
+prediction_time = perf_counter() - start_predict
+
+
+# ---------------------------------------------------------
+# Overall evaluation metrics
+# ---------------------------------------------------------
+
+accuracy = accuracy_score(y_test, y_pred)
+
+macro_precision = precision_score(
+    y_test,
+    y_pred,
+    average="macro",
+)
+
+macro_recall = recall_score(
+    y_test,
+    y_pred,
+    average="macro",
+)
+
+macro_f1 = f1_score(
+    y_test,
+    y_pred,
+    average="macro",
+)
+
+
+print("\nFINAL TEST SET PERFORMANCE")
+print("--------------------------")
+
+print(f"Accuracy:        {accuracy:.3f}")
+print(f"Macro Precision: {macro_precision:.3f}")
+print(f"Macro Recall:    {macro_recall:.3f}")
+print(f"Macro F1:        {macro_f1:.3f}")
+
+print(f"\nTraining time:   {training_time:.4f} seconds")
+print(f"Prediction time: {prediction_time:.4f} seconds")
+
+
+# ---------------------------------------------------------
+# Class-level performance
+# ---------------------------------------------------------
+
+labels = [
+    "Dropout",
+    "Enrolled",
+    "Graduate",
+]
+
+print("\nClassification Report")
+print("---------------------")
+
+print(
+    classification_report(
+        y_test,
+        y_pred,
+        labels=labels,
+        digits=3,
+    )
+)
+
+
+# ---------------------------------------------------------
+# Save classification report
+# ---------------------------------------------------------
+
+report = classification_report(
+    y_test,
+    y_pred,
+    labels=labels,
+    output_dict=True,
+)
+
+report_df = pd.DataFrame(report).transpose()
+
+report_df.to_csv(
+    OUTPUT_DIR / "final_test_classification_report.csv"
+)
+
+
+# ---------------------------------------------------------
+# Confusion matrix
+# ---------------------------------------------------------
+
+cm = confusion_matrix(
+    y_test,
+    y_pred,
+    labels=labels,
+)
+
+cm_df = pd.DataFrame(
+    cm,
+    index=labels,
+    columns=labels,
+)
+
+cm_df.to_csv(
+    OUTPUT_DIR / "final_test_confusion_matrix.csv"
+)
+
+
+display = ConfusionMatrixDisplay(
+    confusion_matrix=cm,
+    display_labels=labels,
+)
+
+display.plot()
+
+plt.title(
+    "Final Logistic Regression\n"
+    "Test Set Confusion Matrix"
+)
+
+plt.tight_layout()
+
+plt.savefig(
+    FIGURES_DIR / "final_test_confusion_matrix.png",
+    dpi=300,
+)
+
+plt.show()
+
+
+# ---------------------------------------------------------
+# Save headline metrics
+# ---------------------------------------------------------
+
+final_metrics = pd.DataFrame(
+    {
+        "Metric": [
+            "Accuracy",
+            "Macro Precision",
+            "Macro Recall",
+            "Macro F1",
+            "Training time (seconds)",
+            "Prediction time (seconds)",
+        ],
+        "Value": [
+            accuracy,
+            macro_precision,
+            macro_recall,
+            macro_f1,
+            training_time,
+            prediction_time,
+        ],
+    }
+)
+
+final_metrics.to_csv(
+    OUTPUT_DIR / "final_test_metrics.csv",
+    index=False,
+)

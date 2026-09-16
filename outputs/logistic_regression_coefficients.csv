@@ -1,0 +1,691 @@
+Feature,Coefficient,Class
+Marital Status_1,0.21123454822371304,Dropout
+Marital Status_2,0.11162789677978899,Dropout
+Marital Status_3,-0.19713198331858528,Dropout
+Marital Status_4,-0.3555392056402121,Dropout
+Marital Status_5,0.1067213387059704,Dropout
+Marital Status_6,0.3461044325063709,Dropout
+Application mode_1,-0.008855162326000232,Dropout
+Application mode_2,-0.10246305315309605,Dropout
+Application mode_5,-0.1827630771922392,Dropout
+Application mode_7,0.560963084869648,Dropout
+Application mode_10,0.33556114987772045,Dropout
+Application mode_15,-1.0689146079293486,Dropout
+Application mode_16,-0.3277266210235459,Dropout
+Application mode_17,0.15533381304403598,Dropout
+Application mode_18,0.2584591389938268,Dropout
+Application mode_26,0.08117628369391715,Dropout
+Application mode_27,0.46326308036230396,Dropout
+Application mode_39,0.2982003019081801,Dropout
+Application mode_42,0.5015687000452309,Dropout
+Application mode_43,-0.13216065359545934,Dropout
+Application mode_44,-0.3139588760052833,Dropout
+Application mode_51,0.15883149781401001,Dropout
+Application mode_53,-0.313106317206011,Dropout
+Application mode_57,-0.14039165492083677,Dropout
+Course_33,0.189843169134496,Dropout
+Course_171,-1.1807864088289177,Dropout
+Course_8014,-0.1575651318883408,Dropout
+Course_9003,-0.48323101055539747,Dropout
+Course_9070,-0.06480948795391175,Dropout
+Course_9085,-0.13632946755719585,Dropout
+Course_9119,0.006810386683712965,Dropout
+Course_9130,0.7220337405344784,Dropout
+Course_9147,-0.2128578970221128,Dropout
+Course_9238,-0.30451831638385524,Dropout
+Course_9254,0.41752295383514554,Dropout
+Course_9500,-0.08483932278387618,Dropout
+Course_9556,0.24916684653516227,Dropout
+Course_9670,-0.06542936156451734,Dropout
+Course_9773,0.2623428740696433,Dropout
+Course_9853,0.8824523208891507,Dropout
+Course_9991,0.18321114011337072,Dropout
+Previous qualification_1,-0.09449836977079216,Dropout
+Previous qualification_2,0.9235157529727978,Dropout
+Previous qualification_3,0.2729778074057132,Dropout
+Previous qualification_4,0.49752631087218646,Dropout
+Previous qualification_5,0.0012590255153272247,Dropout
+Previous qualification_6,-0.21005520490401858,Dropout
+Previous qualification_9,0.19475298506889466,Dropout
+Previous qualification_10,-0.037688946452517066,Dropout
+Previous qualification_12,-0.3869378109711814,Dropout
+Previous qualification_14,0.00287278743055463,Dropout
+Previous qualification_15,-0.19524515985434365,Dropout
+Previous qualification_19,0.16084236982539432,Dropout
+Previous qualification_38,-0.24400535225646852,Dropout
+Previous qualification_39,0.06156812310191451,Dropout
+Previous qualification_40,-0.32976585604052777,Dropout
+Previous qualification_42,-0.20771814973228936,Dropout
+Previous qualification_43,-0.1863832849535938,Dropout
+Nacionality_1,0.31579629796801023,Dropout
+Nacionality_2,-0.03393328314029996,Dropout
+Nacionality_6,-0.3978060225320581,Dropout
+Nacionality_11,-0.12326016787742099,Dropout
+Nacionality_13,-0.0029971319633320366,Dropout
+Nacionality_14,-0.030397160474651765,Dropout
+Nacionality_21,0.361542776846911,Dropout
+Nacionality_22,-0.22569994893083245,Dropout
+Nacionality_24,0.14092123107805188,Dropout
+Nacionality_25,-0.5415155389922698,Dropout
+Nacionality_26,-0.5557151449062041,Dropout
+Nacionality_32,-0.02328166559160857,Dropout
+Nacionality_41,0.12367106015958054,Dropout
+Nacionality_62,-0.014654719190710154,Dropout
+Nacionality_100,0.5136600810382035,Dropout
+Nacionality_101,0.3412946970595948,Dropout
+Nacionality_103,0.20585984656928547,Dropout
+Nacionality_105,0.21640044439986675,Dropout
+Nacionality_108,-0.04686862426306709,Dropout
+Mother's qualification_1,-0.07477870264951321,Dropout
+Mother's qualification_2,-0.6706260245429426,Dropout
+Mother's qualification_3,-0.3424950758644552,Dropout
+Mother's qualification_4,-0.806956747998954,Dropout
+Mother's qualification_5,-0.170798188157384,Dropout
+Mother's qualification_6,-0.24410512236942428,Dropout
+Mother's qualification_9,0.502703928526672,Dropout
+Mother's qualification_10,0.4441278980197856,Dropout
+Mother's qualification_11,0.20674564897865674,Dropout
+Mother's qualification_12,0.4124970472731295,Dropout
+Mother's qualification_14,0.001175762140771709,Dropout
+Mother's qualification_18,0.19211990661361927,Dropout
+Mother's qualification_19,-0.2154626276024428,Dropout
+Mother's qualification_22,-0.014615007565091145,Dropout
+Mother's qualification_26,-0.3072938091552584,Dropout
+Mother's qualification_29,-0.09458540626836158,Dropout
+Mother's qualification_30,-0.043765912790613704,Dropout
+Mother's qualification_34,0.6873215968721059,Dropout
+Mother's qualification_35,0.20394603645087994,Dropout
+Mother's qualification_36,0.2557481344044861,Dropout
+Mother's qualification_37,0.03769393314392794,Dropout
+Mother's qualification_38,-0.0010978454751294005,Dropout
+Mother's qualification_39,-0.44919509307746286,Dropout
+Mother's qualification_40,0.36799929782447277,Dropout
+Mother's qualification_41,0.1073242859360679,Dropout
+Mother's qualification_42,0.03965230999281315,Dropout
+Mother's qualification_43,-0.07250914831928067,Dropout
+Mother's qualification_44,0.2722459529159654,Dropout
+Father's qualification_1,-0.31009676877144504,Dropout
+Father's qualification_2,-0.05538807318647477,Dropout
+Father's qualification_3,-0.032190754878537585,Dropout
+Father's qualification_4,0.2749763238958309,Dropout
+Father's qualification_5,0.5760177804911757,Dropout
+Father's qualification_6,0.05814206865117954,Dropout
+Father's qualification_9,-0.4189620958812453,Dropout
+Father's qualification_10,0.3579123385802116,Dropout
+Father's qualification_11,-0.2337489736023684,Dropout
+Father's qualification_12,-0.118670821369798,Dropout
+Father's qualification_14,0.08139935804111961,Dropout
+Father's qualification_18,0.19211990661361927,Dropout
+Father's qualification_19,-0.3732874882528404,Dropout
+Father's qualification_20,0.039552570650287944,Dropout
+Father's qualification_22,0.7236212004678545,Dropout
+Father's qualification_25,0.05593207753066762,Dropout
+Father's qualification_26,0.0006353541320272305,Dropout
+Father's qualification_27,0.024915920386894566,Dropout
+Father's qualification_29,0.1924161093760403,Dropout
+Father's qualification_30,-0.5155873230577422,Dropout
+Father's qualification_31,0.39887906086966823,Dropout
+Father's qualification_34,0.3020527897753449,Dropout
+Father's qualification_35,0.20394603645087994,Dropout
+Father's qualification_36,-0.16437273720037224,Dropout
+Father's qualification_37,-0.24412508385358234,Dropout
+Father's qualification_38,-0.39073264522146534,Dropout
+Father's qualification_39,-0.1901618232361716,Dropout
+Father's qualification_40,0.5814960027223868,Dropout
+Father's qualification_41,-0.20232912510932088,Dropout
+Father's qualification_42,-0.14707521488603,Dropout
+Father's qualification_43,-0.45658997234992293,Dropout
+Father's qualification_44,0.012321029479162287,Dropout
+Mother's occupation_0,1.2560168306989683,Dropout
+Mother's occupation_1,0.2879146893037378,Dropout
+Mother's occupation_2,0.3786528240786741,Dropout
+Mother's occupation_3,0.10678474100191773,Dropout
+Mother's occupation_4,0.1878052198736679,Dropout
+Mother's occupation_5,0.20223841488575384,Dropout
+Mother's occupation_6,-0.1363840481102137,Dropout
+Mother's occupation_7,0.31050573994430325,Dropout
+Mother's occupation_8,0.5615720100761022,Dropout
+Mother's occupation_9,0.05568589167811551,Dropout
+Mother's occupation_10,-0.23827738153741304,Dropout
+Mother's occupation_90,0.5041738082837189,Dropout
+Mother's occupation_99,0.046755438852208835,Dropout
+Mother's occupation_122,-0.0648945752914014,Dropout
+Mother's occupation_123,0.36641519202984824,Dropout
+Mother's occupation_131,-0.1306326781238046,Dropout
+Mother's occupation_132,-0.04858206479554071,Dropout
+Mother's occupation_134,-0.472937451001679,Dropout
+Mother's occupation_141,-0.24610849338593452,Dropout
+Mother's occupation_143,-0.10684451939910167,Dropout
+Mother's occupation_144,-0.3760667423235767,Dropout
+Mother's occupation_151,-0.2582309281652198,Dropout
+Mother's occupation_152,-0.0037148389589456788,Dropout
+Mother's occupation_153,-0.008401250882257133,Dropout
+Mother's occupation_171,-0.29538234131740426,Dropout
+Mother's occupation_173,-0.08824243392454575,Dropout
+Mother's occupation_175,-0.10587432531489217,Dropout
+Mother's occupation_191,-1.1443088799222785,Dropout
+Mother's occupation_192,-0.33123977792637443,Dropout
+Mother's occupation_193,0.08740396611640852,Dropout
+Mother's occupation_194,-0.07278500918579714,Dropout
+Father's occupation_0,0.22334732466653504,Dropout
+Father's occupation_1,0.22919277354300122,Dropout
+Father's occupation_2,-0.09858202848688975,Dropout
+Father's occupation_3,0.3052396056720684,Dropout
+Father's occupation_4,0.568849215686005,Dropout
+Father's occupation_5,0.10788963041156459,Dropout
+Father's occupation_6,-0.11630977329436218,Dropout
+Father's occupation_7,0.20598354004046662,Dropout
+Father's occupation_8,0.20944996368299856,Dropout
+Father's occupation_9,0.3919842716706,Dropout
+Father's occupation_10,0.19940731677428836,Dropout
+Father's occupation_90,1.102569581081353,Dropout
+Father's occupation_99,-0.13775647106239547,Dropout
+Father's occupation_101,-0.01366545997105648,Dropout
+Father's occupation_102,-0.14712846315387182,Dropout
+Father's occupation_103,0.4141634827957888,Dropout
+Father's occupation_112,-0.09627011321151038,Dropout
+Father's occupation_122,-0.07300582748188401,Dropout
+Father's occupation_123,-0.3390714924327462,Dropout
+Father's occupation_131,-0.06606484956131696,Dropout
+Father's occupation_134,-0.3696133063661126,Dropout
+Father's occupation_135,-0.04924783829480052,Dropout
+Father's occupation_141,-0.019627320404183926,Dropout
+Father's occupation_143,-0.005567161385456334,Dropout
+Father's occupation_144,-0.09548653315837333,Dropout
+Father's occupation_151,-0.05799271738080528,Dropout
+Father's occupation_152,-0.03969734697127509,Dropout
+Father's occupation_153,-0.006797419540997349,Dropout
+Father's occupation_154,-0.017802024984728573,Dropout
+Father's occupation_161,-0.19758057292829892,Dropout
+Father's occupation_163,-0.5218815575782902,Dropout
+Father's occupation_171,-0.2868630519043094,Dropout
+Father's occupation_172,-0.09687193511646851,Dropout
+Father's occupation_175,-0.08479157150293741,Dropout
+Father's occupation_181,-0.13388096078233774,Dropout
+Father's occupation_182,-0.13443518826891837,Dropout
+Father's occupation_183,-0.12305789834553116,Dropout
+Father's occupation_192,-0.14205053559001338,Dropout
+Father's occupation_193,-0.31719174191544336,Dropout
+Father's occupation_194,0.06196208342258701,Dropout
+Father's occupation_195,-0.008730601114894982,Dropout
+Application order,0.06962944112982093,Dropout
+Previous qualification (grade),0.034242950176797786,Dropout
+Admission grade,-0.016369990714114494,Dropout
+Age at enrollment,0.13583593749297207,Dropout
+Curricular units 1st sem (credited),0.442680202491569,Dropout
+Curricular units 1st sem (enrolled),0.8047469534080106,Dropout
+Curricular units 1st sem (evaluations),-0.0995162678072795,Dropout
+Curricular units 1st sem (approved),-1.7378209789667722,Dropout
+Curricular units 1st sem (grade),-0.30335323401629066,Dropout
+Curricular units 1st sem (without evaluations),-0.1708268714028713,Dropout
+Unemployment rate,0.269185833739263,Dropout
+Inflation rate,-0.02091421843075056,Dropout
+GDP,0.054658464396389474,Dropout
+Daytime/evening attendance,0.19737101903202212,Dropout
+Displaced,0.25716285955237755,Dropout
+Educational special needs,-0.06196349019028135,Dropout
+Debtor,0.4971653291614942,Dropout
+Tuition fees up to date,-1.7870573163482064,Dropout
+Gender,0.3523745290892654,Dropout
+Scholarship holder,-0.24582898952310514,Dropout
+International,-0.09277927071095908,Dropout
+Marital Status_1,-0.04495826204810253,Enrolled
+Marital Status_2,-0.21707752379107365,Enrolled
+Marital Status_3,0.02666580207893495,Enrolled
+Marital Status_4,0.062333842788347575,Enrolled
+Marital Status_5,-0.33629016990435645,Enrolled
+Marital Status_6,0.37508613742600844,Enrolled
+Application mode_1,-0.03718191327653205,Enrolled
+Application mode_2,-0.18295171484313258,Enrolled
+Application mode_5,0.737190888726712,Enrolled
+Application mode_7,-0.22962524331393203,Enrolled
+Application mode_10,-0.7220275021095504,Enrolled
+Application mode_15,-0.24471826557350418,Enrolled
+Application mode_16,0.2115513089932336,Enrolled
+Application mode_17,-0.09991909081087386,Enrolled
+Application mode_18,-0.47422893079173983,Enrolled
+Application mode_26,-0.0019883950865696937,Enrolled
+Application mode_27,-0.0011121798944881038,Enrolled
+Application mode_39,-0.020845166858133965,Enrolled
+Application mode_42,-0.3334834464080191,Enrolled
+Application mode_43,0.39223639844637964,Enrolled
+Application mode_44,0.5830192848394261,Enrolled
+Application mode_51,-0.0256296780155673,Enrolled
+Application mode_53,0.5440527537875491,Enrolled
+Application mode_57,-0.2285792812614952,Enrolled
+Course_33,0.46998134928833285,Enrolled
+Course_171,-0.24070750633703072,Enrolled
+Course_8014,-0.17265095094586508,Enrolled
+Course_9003,-0.16041867583301678,Enrolled
+Course_9070,0.19134411630901152,Enrolled
+Course_9085,-0.0121126819612196,Enrolled
+Course_9119,0.9990566770485909,Enrolled
+Course_9130,-0.5882898073320977,Enrolled
+Course_9147,0.29203957194719204,Enrolled
+Course_9238,-0.45091444241561524,Enrolled
+Course_9254,-0.2143748765056365,Enrolled
+Course_9500,0.020241865941335126,Enrolled
+Course_9556,-0.12483832956893881,Enrolled
+Course_9670,-0.026172325161785786,Enrolled
+Course_9773,-0.24194486396053794,Enrolled
+Course_9853,0.05134217557614057,Enrolled
+Course_9991,0.07417853046089418,Enrolled
+Previous qualification_1,0.3988337477319148,Enrolled
+Previous qualification_2,-0.14283181368212186,Enrolled
+Previous qualification_3,-0.29251574307335554,Enrolled
+Previous qualification_4,-0.3888583153644074,Enrolled
+Previous qualification_5,-0.0010254499508225957,Enrolled
+Previous qualification_6,0.060158350540584354,Enrolled
+Previous qualification_9,-0.15884642041010466,Enrolled
+Previous qualification_10,-0.014588319855302838,Enrolled
+Previous qualification_12,0.12568119411379058,Enrolled
+Previous qualification_14,-0.001412561358331879,Enrolled
+Previous qualification_15,-0.041541215845146154,Enrolled
+Previous qualification_19,-0.1423375159318103,Enrolled
+Previous qualification_38,0.17347707355235184,Enrolled
+Previous qualification_39,0.12773570602055836,Enrolled
+Previous qualification_40,0.3670014950691118,Enrolled
+Previous qualification_42,-0.0018107838292812563,Enrolled
+Previous qualification_43,-0.20135960117786222,Enrolled
+Nacionality_1,-0.24438493846586515,Enrolled
+Nacionality_2,-0.108496767096788,Enrolled
+Nacionality_6,0.5492861916101544,Enrolled
+Nacionality_11,-0.25426163889647624,Enrolled
+Nacionality_13,-0.031255631353739856,Enrolled
+Nacionality_14,-0.13020681977352483,Enrolled
+Nacionality_21,-0.32242908442639895,Enrolled
+Nacionality_22,0.09945202051021879,Enrolled
+Nacionality_24,-0.20761377031501374,Enrolled
+Nacionality_25,0.5500423221853619,Enrolled
+Nacionality_26,-0.21659066659835313,Enrolled
+Nacionality_32,0.036153979979152234,Enrolled
+Nacionality_41,-0.2004270757024925,Enrolled
+Nacionality_62,0.044797420549998676,Enrolled
+Nacionality_100,0.19229353288788606,Enrolled
+Nacionality_101,-0.21725183185040897,Enrolled
+Nacionality_103,-0.22095463296407092,Enrolled
+Nacionality_105,0.3756174261326511,Enrolled
+Nacionality_108,0.17198979013746984,Enrolled
+Mother's qualification_1,0.2516045094533736,Enrolled
+Mother's qualification_2,0.5143777034362184,Enrolled
+Mother's qualification_3,0.4141694960998174,Enrolled
+Mother's qualification_4,0.4755824258692496,Enrolled
+Mother's qualification_5,0.43205630869071665,Enrolled
+Mother's qualification_6,-0.13191720513320326,Enrolled
+Mother's qualification_9,-0.7276684181399525,Enrolled
+Mother's qualification_10,-0.2220792618303991,Enrolled
+Mother's qualification_11,-0.05495300604583545,Enrolled
+Mother's qualification_12,-0.2166724226882409,Enrolled
+Mother's qualification_14,-0.0007902471041895132,Enrolled
+Mother's qualification_18,-0.06741454219307191,Enrolled
+Mother's qualification_19,0.3514385129608278,Enrolled
+Mother's qualification_22,-0.00786409863613249,Enrolled
+Mother's qualification_26,-0.11141948361841478,Enrolled
+Mother's qualification_29,-0.23719729363763822,Enrolled
+Mother's qualification_30,-0.044235042372366064,Enrolled
+Mother's qualification_34,-0.5478541816914857,Enrolled
+Mother's qualification_35,-0.1272291775626169,Enrolled
+Mother's qualification_36,-0.30776295589082653,Enrolled
+Mother's qualification_37,0.18927094346224263,Enrolled
+Mother's qualification_38,0.15886752533997373,Enrolled
+Mother's qualification_39,0.01750121706710552,Enrolled
+Mother's qualification_40,0.07691984305280994,Enrolled
+Mother's qualification_41,-0.5932629759361894,Enrolled
+Mother's qualification_42,-0.08225770387109496,Enrolled
+Mother's qualification_43,0.6516720776061888,Enrolled
+Mother's qualification_44,-0.1871227201371075,Enrolled
+Father's qualification_1,0.2719328874404729,Enrolled
+Father's qualification_2,0.6148092550651552,Enrolled
+Father's qualification_3,0.13143463281530463,Enrolled
+Father's qualification_4,-0.23754397813868566,Enrolled
+Father's qualification_5,-0.5511542473731053,Enrolled
+Father's qualification_6,-0.04584758399240244,Enrolled
+Father's qualification_9,-0.3055660432257283,Enrolled
+Father's qualification_10,-0.09646853206318046,Enrolled
+Father's qualification_11,-0.3693080276896737,Enrolled
+Father's qualification_12,-0.08019193793734687,Enrolled
+Father's qualification_14,-0.28194933539262773,Enrolled
+Father's qualification_18,-0.06741454219307191,Enrolled
+Father's qualification_19,0.2388854847603346,Enrolled
+Father's qualification_20,-0.014799841933674767,Enrolled
+Father's qualification_22,-0.27751452673834476,Enrolled
+Father's qualification_25,-0.006619971268102743,Enrolled
+Father's qualification_26,-0.0005059851116779913,Enrolled
+Father's qualification_27,-0.022442462721165967,Enrolled
+Father's qualification_29,-0.1488734371850221,Enrolled
+Father's qualification_30,0.42883261741018647,Enrolled
+Father's qualification_31,-0.14344491080955804,Enrolled
+Father's qualification_34,0.06871576322676884,Enrolled
+Father's qualification_35,-0.1272291775626169,Enrolled
+Father's qualification_36,-0.30101660833132765,Enrolled
+Father's qualification_37,0.1929585345492036,Enrolled
+Father's qualification_38,0.25727047784101975,Enrolled
+Father's qualification_39,1.1826320443020681,Enrolled
+Father's qualification_40,-0.36448079504866754,Enrolled
+Father's qualification_41,0.20787314202542526,Enrolled
+Father's qualification_42,-0.05628044564262585,Enrolled
+Father's qualification_43,-0.21965016351258396,Enrolled
+Father's qualification_44,-0.011282459014984212,Enrolled
+Mother's occupation_0,-1.4700707509442688,Enrolled
+Mother's occupation_1,-0.2355394993971428,Enrolled
+Mother's occupation_2,-0.16421016983312775,Enrolled
+Mother's occupation_3,0.025365343353624264,Enrolled
+Mother's occupation_4,-0.16769857197483856,Enrolled
+Mother's occupation_5,-0.26830754911868127,Enrolled
+Mother's occupation_6,-0.3012792019499884,Enrolled
+Mother's occupation_7,-0.14864739340076777,Enrolled
+Mother's occupation_8,0.22293984819523915,Enrolled
+Mother's occupation_9,-0.07100553652729107,Enrolled
+Mother's occupation_10,-0.03089343748685954,Enrolled
+Mother's occupation_90,-1.2201211492624011,Enrolled
+Mother's occupation_99,0.3696722543355837,Enrolled
+Mother's occupation_122,0.20833888550502294,Enrolled
+Mother's occupation_123,-0.12161159711896904,Enrolled
+Mother's occupation_131,0.26872194135282457,Enrolled
+Mother's occupation_132,0.6139372588619126,Enrolled
+Mother's occupation_134,0.6246900562141849,Enrolled
+Mother's occupation_141,0.42722334504515574,Enrolled
+Mother's occupation_143,0.13007577692653435,Enrolled
+Mother's occupation_144,-0.17657134405078106,Enrolled
+Mother's occupation_151,0.07136291898856313,Enrolled
+Mother's occupation_152,-0.032578596027195095,Enrolled
+Mother's occupation_153,-0.0904569440027446,Enrolled
+Mother's occupation_171,-0.15118588557474655,Enrolled
+Mother's occupation_173,0.13834814293257122,Enrolled
+Mother's occupation_175,0.10011442396282981,Enrolled
+Mother's occupation_191,0.6689095779877231,Enrolled
+Mother's occupation_192,0.6545992765341436,Enrolled
+Mother's occupation_193,-0.17506132831032312,Enrolled
+Mother's occupation_194,0.1666997313339761,Enrolled
+Father's occupation_0,-0.8032641816295637,Enrolled
+Father's occupation_1,-0.3428160180608006,Enrolled
+Father's occupation_2,0.14052532520969865,Enrolled
+Father's occupation_3,-0.4359200496870509,Enrolled
+Father's occupation_4,-0.23390838867098018,Enrolled
+Father's occupation_5,0.017964522476966872,Enrolled
+Father's occupation_6,-0.030429730174742868,Enrolled
+Father's occupation_7,-0.10715167480880014,Enrolled
+Father's occupation_8,-0.13721350872558438,Enrolled
+Father's occupation_9,-0.2801486361980323,Enrolled
+Father's occupation_10,-0.02833832481084767,Enrolled
+Father's occupation_90,-1.0100461260331366,Enrolled
+Father's occupation_99,0.2651079600727043,Enrolled
+Father's occupation_101,-0.08688688496362615,Enrolled
+Father's occupation_102,0.25450915075810454,Enrolled
+Father's occupation_103,-0.3462090885137662,Enrolled
+Father's occupation_112,0.3559887501815102,Enrolled
+Father's occupation_122,0.43203262303464746,Enrolled
+Father's occupation_123,0.3696890897868355,Enrolled
+Father's occupation_131,-0.32236268097199716,Enrolled
+Father's occupation_134,0.37048963828533304,Enrolled
+Father's occupation_135,0.26042202529918046,Enrolled
+Father's occupation_141,-0.060772079981931515,Enrolled
+Father's occupation_143,-0.10121793580844039,Enrolled
+Father's occupation_144,0.3404479888926149,Enrolled
+Father's occupation_151,-0.28841094079418717,Enrolled
+Father's occupation_152,0.30182202438471867,Enrolled
+Father's occupation_153,-0.06053475951607048,Enrolled
+Father's occupation_154,-0.4607484619360037,Enrolled
+Father's occupation_161,0.40864602097741964,Enrolled
+Father's occupation_163,0.4818375132000407,Enrolled
+Father's occupation_171,0.27927207348631167,Enrolled
+Father's occupation_172,0.022389004407198987,Enrolled
+Father's occupation_175,0.18865725413400133,Enrolled
+Father's occupation_181,0.24318887923321153,Enrolled
+Father's occupation_182,0.0880723236523111,Enrolled
+Father's occupation_183,0.4612673990554186,Enrolled
+Father's occupation_192,-0.23877730139299533,Enrolled
+Father's occupation_193,0.39076277597930004,Enrolled
+Father's occupation_194,-0.28517614422128573,Enrolled
+Father's occupation_195,-0.1469995990579416,Enrolled
+Application order,-0.13440408027129203,Enrolled
+Previous qualification (grade),-0.04237357338610085,Enrolled
+Admission grade,-0.04438382814958189,Enrolled
+Age at enrollment,-0.048960595399102545,Enrolled
+Curricular units 1st sem (credited),-0.24455594884586512,Enrolled
+Curricular units 1st sem (enrolled),0.15440049869821115,Enrolled
+Curricular units 1st sem (evaluations),0.38453361024744126,Enrolled
+Curricular units 1st sem (approved),-0.34769527693133523,Enrolled
+Curricular units 1st sem (grade),-0.16355377772392263,Enrolled
+Curricular units 1st sem (without evaluations),0.006304242565000915,Enrolled
+Unemployment rate,-0.193994138543706,Enrolled
+Inflation rate,0.021139026619922827,Enrolled
+GDP,-0.036522971582587875,Enrolled
+Daytime/evening attendance,-0.03576775296526636,Enrolled
+Displaced,-0.07952653453490158,Enrolled
+Educational special needs,0.055294954686913776,Enrolled
+Debtor,0.26355936717881834,Enrolled
+Tuition fees up to date,0.2701590265971172,Enrolled
+Gender,-0.08842830064291642,Enrolled
+Scholarship holder,-0.29288252210750226,Enrolled
+International,0.1101447650156256,Enrolled
+Marital Status_1,-0.16627628617560422,Graduate
+Marital Status_2,0.1054496270112869,Graduate
+Marital Status_3,0.17046618123965152,Graduate
+Marital Status_4,0.2932053628518643,Graduate
+Marital Status_5,0.2295688311983861,Graduate
+Marital Status_6,-0.7211905699323805,Graduate
+Application mode_1,0.04603707560253181,Graduate
+Application mode_2,0.2854147679962281,Graduate
+Application mode_5,-0.5544278115344741,Graduate
+Application mode_7,-0.3313378415557153,Graduate
+Application mode_10,0.3864663522318316,Graduate
+Application mode_15,1.3136328735028562,Graduate
+Application mode_16,0.11617531203031223,Graduate
+Application mode_17,-0.05541472223315998,Graduate
+Application mode_18,0.2157697917979091,Graduate
+Application mode_26,-0.07918788860734823,Graduate
+Application mode_27,-0.46215090046781604,Graduate
+Application mode_39,-0.2773551350500445,Graduate
+Application mode_42,-0.16808525363720953,Graduate
+Application mode_43,-0.26007574485092155,Graduate
+Application mode_44,-0.2690604088341376,Graduate
+Application mode_51,-0.13320181979844,Graduate
+Application mode_53,-0.23094643658153882,Graduate
+Application mode_57,0.36897093618233356,Graduate
+Course_33,-0.6598245184228287,Graduate
+Course_171,1.4214939151659367,Graduate
+Course_8014,0.33021608283420795,Graduate
+Course_9003,0.6436496863884184,Graduate
+Course_9070,-0.12653462835509996,Graduate
+Course_9085,0.1484421495184139,Graduate
+Course_9119,-1.0058670637323068,Graduate
+Course_9130,-0.13374393320238193,Graduate
+Course_9147,-0.07918167492507872,Graduate
+Course_9238,0.7554327587994718,Graduate
+Course_9254,-0.2031480773295081,Graduate
+Course_9500,0.06459745684253948,Graduate
+Course_9556,-0.12432851696622342,Graduate
+Course_9670,0.09160168672630288,Graduate
+Course_9773,-0.020398010109104737,Graduate
+Course_9853,-0.93379449646529,Graduate
+Course_9991,-0.2573896705742633,Graduate
+Previous qualification_1,-0.30433537796111815,Graduate
+Previous qualification_2,-0.7806839392906719,Graduate
+Previous qualification_3,0.019537935667644134,Graduate
+Previous qualification_4,-0.10866799550777936,Graduate
+Previous qualification_5,-0.00023357556450460552,Graduate
+Previous qualification_6,0.1498968543634333,Graduate
+Previous qualification_9,-0.03590656465878952,Graduate
+Previous qualification_10,0.05227726630782015,Graduate
+Previous qualification_12,0.261256616857392,Graduate
+Previous qualification_14,-0.0014602260722227807,Graduate
+Previous qualification_15,0.23678637569948982,Graduate
+Previous qualification_19,-0.018504853893584423,Graduate
+Previous qualification_38,0.07052827870411625,Graduate
+Previous qualification_39,-0.1893038291224733,Graduate
+Previous qualification_40,-0.03723563902858586,Graduate
+Previous qualification_42,0.20952893356157087,Graduate
+Previous qualification_43,0.3877428861314552,Graduate
+Nacionality_1,-0.07141135950212794,Graduate
+Nacionality_2,0.1424300502370884,Graduate
+Nacionality_6,-0.15148016907809708,Graduate
+Nacionality_11,0.3775218067738942,Graduate
+Nacionality_13,0.03425276331707194,Graduate
+Nacionality_14,0.16060398024817688,Graduate
+Nacionality_21,-0.039113692420513206,Graduate
+Nacionality_22,0.12624792842061516,Graduate
+Nacionality_24,0.06669253923696151,Graduate
+Nacionality_25,-0.008526783193089636,Graduate
+Nacionality_26,0.7723058115045581,Graduate
+Nacionality_32,-0.012872314387543998,Graduate
+Nacionality_41,0.0767560155429126,Graduate
+Nacionality_62,-0.030142701359288707,Graduate
+Nacionality_100,-0.705953613926092,Graduate
+Nacionality_101,-0.12404286520918917,Graduate
+Nacionality_103,0.015094786394787514,Graduate
+Nacionality_105,-0.5920178705325131,Graduate
+Nacionality_108,-0.12512116587440275,Graduate
+Mother's qualification_1,-0.17682580680386029,Graduate
+Mother's qualification_2,0.15624832110672443,Graduate
+Mother's qualification_3,-0.0716744202353627,Graduate
+Mother's qualification_4,0.3313743221297035,Graduate
+Mother's qualification_5,-0.26125812053333564,Graduate
+Mother's qualification_6,0.376022327502625,Graduate
+Mother's qualification_9,0.2249644896132778,Graduate
+Mother's qualification_10,-0.2220486361893849,Graduate
+Mother's qualification_11,-0.15179264293282346,Graduate
+Mother's qualification_12,-0.1958246245848842,Graduate
+Mother's qualification_14,-0.0003855150365821821,Graduate
+Mother's qualification_18,-0.12470536442054661,Graduate
+Mother's qualification_19,-0.13597588535838281,Graduate
+Mother's qualification_22,0.02247910620122361,Graduate
+Mother's qualification_26,0.41871329277367075,Graduate
+Mother's qualification_29,0.33178269990600034,Graduate
+Mother's qualification_30,0.08800095516297966,Graduate
+Mother's qualification_34,-0.13946741518061734,Graduate
+Mother's qualification_35,-0.07671685888826241,Graduate
+Mother's qualification_36,0.0520148214863382,Graduate
+Mother's qualification_37,-0.22696487660617332,Graduate
+Mother's qualification_38,-0.15776967986484253,Graduate
+Mother's qualification_39,0.4316938760103577,Graduate
+Mother's qualification_40,-0.4449191408772825,Graduate
+Mother's qualification_41,0.4859386900001205,Graduate
+Mother's qualification_42,0.04260539387828154,Graduate
+Mother's qualification_43,-0.5791629292869069,Graduate
+Mother's qualification_44,-0.0851232327788583,Graduate
+Father's qualification_1,0.03816388133097092,Graduate
+Father's qualification_2,-0.5594211818786798,Graduate
+Father's qualification_3,-0.09924387793676663,Graduate
+Father's qualification_4,-0.03743234575714541,Graduate
+Father's qualification_5,-0.02486353311807217,Graduate
+Father's qualification_6,-0.012294484658776928,Graduate
+Father's qualification_9,0.7245281391069712,Graduate
+Father's qualification_10,-0.26144380651702764,Graduate
+Father's qualification_11,0.6030570012920432,Graduate
+Father's qualification_12,0.1988627593071448,Graduate
+Father's qualification_14,0.2005499773515099,Graduate
+Father's qualification_18,-0.12470536442054661,Graduate
+Father's qualification_19,0.1344020034924997,Graduate
+Father's qualification_20,-0.024752728716613288,Graduate
+Father's qualification_22,-0.44610667372951496,Graduate
+Father's qualification_25,-0.04931210626256498,Graduate
+Father's qualification_26,-0.00012936902034923792,Graduate
+Father's qualification_27,-0.002473457665728729,Graduate
+Father's qualification_29,-0.04354267219101732,Graduate
+Father's qualification_30,0.08675470564755382,Graduate
+Father's qualification_31,-0.2554341500601107,Graduate
+Father's qualification_34,-0.37076855300211303,Graduate
+Father's qualification_35,-0.07671685888826241,Graduate
+Father's qualification_36,0.46538934553169603,Graduate
+Father's qualification_37,0.051166549304377605,Graduate
+Father's qualification_38,0.1334621673804473,Graduate
+Father's qualification_39,-0.9924702210658961,Graduate
+Father's qualification_40,-0.21701520767371524,Graduate
+Father's qualification_41,-0.005544016916105036,Graduate
+Father's qualification_42,0.20335566052865578,Graduate
+Father's qualification_43,0.6762401358625016,Graduate
+Father's qualification_44,-0.0010385704641780009,Graduate
+Mother's occupation_0,0.2140539202452999,Graduate
+Mother's occupation_1,-0.05237518990659584,Graduate
+Mother's occupation_2,-0.21444265424554623,Graduate
+Mother's occupation_3,-0.13215008435554143,Graduate
+Mother's occupation_4,-0.02010664789883054,Graduate
+Mother's occupation_5,0.06606913423292589,Graduate
+Mother's occupation_6,0.43766325006020423,Graduate
+Mother's occupation_7,-0.16185834654353504,Graduate
+Mother's occupation_8,-0.7845118582713467,Graduate
+Mother's occupation_9,0.015319644849167778,Graduate
+Mother's occupation_10,0.26917081902427065,Graduate
+Mother's occupation_90,0.7159473409786928,Graduate
+Mother's occupation_99,-0.4164276931877906,Graduate
+Mother's occupation_122,-0.14344431021362136,Graduate
+Mother's occupation_123,-0.2448035949108791,Graduate
+Mother's occupation_131,-0.13808926322901965,Graduate
+Mother's occupation_132,-0.5653551940663756,Graduate
+Mother's occupation_134,-0.15175260521250875,Graduate
+Mother's occupation_141,-0.18111485165922067,Graduate
+Mother's occupation_143,-0.023231257527433387,Graduate
+Mother's occupation_144,0.5526380863743574,Graduate
+Mother's occupation_151,0.18686800917665752,Graduate
+Mother's occupation_152,0.036293434986140516,Graduate
+Mother's occupation_153,0.09885819488500167,Graduate
+Mother's occupation_171,0.44656822689215375,Graduate
+Mother's occupation_173,-0.05010570900802558,Graduate
+Mother's occupation_175,0.0057599013520620015,Graduate
+Mother's occupation_191,0.47539930193456087,Graduate
+Mother's occupation_192,-0.3233594986077727,Graduate
+Mother's occupation_193,0.08765736219391544,Graduate
+Mother's occupation_194,-0.09391472214817885,Graduate
+Father's occupation_0,0.5799168569630325,Graduate
+Father's occupation_1,0.11362324451780091,Graduate
+Father's occupation_2,-0.041943296722809505,Graduate
+Father's occupation_3,0.13068044401497717,Graduate
+Father's occupation_4,-0.3349408270150272,Graduate
+Father's occupation_5,-0.12585415288853183,Graduate
+Father's occupation_6,0.1467395034691054,Graduate
+Father's occupation_7,-0.09883186523166569,Graduate
+Father's occupation_8,-0.07223645495741045,Graduate
+Father's occupation_9,-0.11183563547256134,Graduate
+Father's occupation_10,-0.1710689919634411,Graduate
+Father's occupation_90,-0.09252345504823196,Graduate
+Father's occupation_99,-0.12735148901031074,Graduate
+Father's occupation_101,0.10055234493468276,Graduate
+Father's occupation_102,-0.10738068760423317,Graduate
+Father's occupation_103,-0.0679543942820228,Graduate
+Father's occupation_112,-0.259718636970002,Graduate
+Father's occupation_122,-0.3590267955527658,Graduate
+Father's occupation_123,-0.03061759735409038,Graduate
+Father's occupation_131,0.3884275305333147,Graduate
+Father's occupation_134,-0.0008763319192203618,Graduate
+Father's occupation_135,-0.21117418700437895,Graduate
+Father's occupation_141,0.08039940038611532,Graduate
+Father's occupation_143,0.10678509719389714,Graduate
+Father's occupation_144,-0.24496145573424333,Graduate
+Father's occupation_151,0.34640365817499436,Graduate
+Father's occupation_152,-0.26212467741344286,Graduate
+Father's occupation_153,0.06733217905706772,Graduate
+Father's occupation_154,0.4785504869207346,Graduate
+Father's occupation_161,-0.21106544804912328,Graduate
+Father's occupation_163,0.04004404437824888,Graduate
+Father's occupation_171,0.007590978418001693,Graduate
+Father's occupation_172,0.07448293070926963,Graduate
+Father's occupation_175,-0.10386568263106465,Graduate
+Father's occupation_181,-0.10930791845087391,Graduate
+Father's occupation_182,0.04636286461660733,Graduate
+Father's occupation_183,-0.3382095007098914,Graduate
+Father's occupation_192,0.3808278369830084,Graduate
+Father's occupation_193,-0.07357103406386054,Graduate
+Father's occupation_194,0.22321406079869713,Graduate
+Father's occupation_195,0.1557302001728371,Graduate
+Application order,0.06477463914148139,Graduate
+Previous qualification (grade),0.008130623209303895,Graduate
+Admission grade,0.06075381886369173,Graduate
+Age at enrollment,-0.08687534209388126,Graduate
+Curricular units 1st sem (credited),-0.19812425364570135,Graduate
+Curricular units 1st sem (enrolled),-0.9591474521062157,Graduate
+Curricular units 1st sem (evaluations),-0.2850173424401693,Graduate
+Curricular units 1st sem (approved),2.0855162558981135,Graduate
+Curricular units 1st sem (grade),0.4669070117402067,Graduate
+Curricular units 1st sem (without evaluations),0.16452262883788354,Graduate
+Unemployment rate,-0.07519169519555836,Graduate
+Inflation rate,-0.00022480818915890022,Graduate
+GDP,-0.018135492813804534,Graduate
+Daytime/evening attendance,-0.16160326606674033,Graduate
+Displaced,-0.17763632501748233,Graduate
+Educational special needs,0.0066685355033674785,Graduate
+Debtor,-0.7607246963403169,Graduate
+Tuition fees up to date,1.5168982897510819,Graduate
+Gender,-0.2639462284463473,Graduate
+Scholarship holder,0.5387115116306072,Graduate
+International,-0.017365494304666662,Graduate
