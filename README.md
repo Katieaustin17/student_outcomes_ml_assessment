@@ -41,8 +41,8 @@ conda activate student-ml
 Run:
 
 ```bash
-python src/explore_data.py
-python src/classification_models.py
+python scripts/explore_data.py
+python scripts/classification_models.py
 ```
 
 ## Run the ANN extension
@@ -57,7 +57,7 @@ conda activate student-ml-ann
 Then run:
 
 ```bash
-python src/neural_network.py
+python scripts/neural_network.py
 ```
 
 ## Outputs
