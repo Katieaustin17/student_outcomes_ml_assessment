@@ -4,7 +4,7 @@ Supporting implementation for the Machine Learning and Predictive Analytics asse
 
 ## Aim
 
-To investigate whether student outcomes (**Dropout, Enrolled or Graduate**) can be predicted using information available by the **end of the first semester**.
+To investigate whether student outcomes (Dropout, Enrolled or Graduate) can be predicted using information available by the end of the first semester.
 
 ## Models
 
@@ -14,7 +14,7 @@ To investigate whether student outcomes (**Dropout, Enrolled or Graduate**) can 
 
 ## Dataset
 
-**Predict Students' Dropout and Academic Success**  
+Predict Students' Dropout and Academic Success  
 UCI Machine Learning Repository, Dataset ID 697.
 
 The six second-semester curricular-unit variables are removed before modelling so that the prediction point remains at the end of the first semester.
