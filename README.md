@@ -23,9 +23,9 @@ The six second-semester curricular-unit variables are removed before modelling s
 
 The code has been condensed into three scripts to reduce repetition while keeping the analysis stages clear:
 
-1. `src/explore_data.py` — dataset checks, target distribution and bivariate analysis
-2. `src/classification_models.py` — preprocessing, 5-fold stratified cross-validation, Logistic Regression and Random Forest comparison, grid search, final test evaluation and coefficient interpretation
-3. `src/neural_network.py` — exploratory ANN using a validation subset of the development data
+1. `scripts/explore_data.py` — dataset checks, target distribution and bivariate analysis
+2. `scripts/classification_models.py` — preprocessing, 5-fold stratified cross-validation, Logistic Regression and Random Forest comparison, grid search, final test evaluation and coefficient interpretation
+3. `scripts/neural_network.py` — exploratory ANN using a validation subset of the development data
 
 The classical modelling script follows the module workflow: an 80/20 stratified train-test split, cross-validation on the training set only, preprocessing inside scikit-learn pipelines, grid search for hyperparameter tuning, and one final evaluation on the held-out test set.
 
