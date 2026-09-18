@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 
 np.random.seed(42)
 
+from time import perf_counter
+from sklearn.base import clone
+
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
@@ -30,9 +33,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
-# ---------------------------------------------------------
+
 # Load and prepare data
-# ---------------------------------------------------------
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = PROJECT_ROOT / "data" / "raw" / "student_outcomes.csv"
@@ -70,9 +73,8 @@ print(f"Training set: {len(X_train)} samples")
 print(f"Test set:     {len(X_test)} samples (held out until final evaluation)")
 
 
-# ---------------------------------------------------------
 # Feature groups and preprocessing
-# ---------------------------------------------------------
+
 
 categorical_features = [
     "Marital Status",
@@ -130,9 +132,9 @@ forest_preprocessor = ColumnTransformer(
 )
 
 
-# ---------------------------------------------------------
+
 # Candidate models
-# ---------------------------------------------------------
+
 
 models = {
     "Logistic Regression": Pipeline(
@@ -156,8 +158,7 @@ models = {
     ),
 }
 
-# Stratified 5-fold CV mirrors the taught classification workflow and
-# keeps class proportions similar in every fold.
+# Stratified 5-fold CV mirrors the taught classification workflow and keeps class proportions similar in every fold.
 cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
 scoring = {
@@ -168,9 +169,9 @@ scoring = {
 }
 
 
-# ---------------------------------------------------------
+
 # 5-fold cross-validation model comparison
-# ---------------------------------------------------------
+
 
 comparison_rows = []
 
@@ -212,9 +213,9 @@ print(comparison.round(3).to_string(index=False))
 print("=" * 78)
 
 
-# ---------------------------------------------------------
+
 # Hyperparameter tuning with cross-validation
-# ---------------------------------------------------------
+
 
 logistic_grid = {
     "classifier__C": [0.01, 0.1, 1, 10, 100],
@@ -283,9 +284,8 @@ print(f"Mean training macro F1: {best_rf_row['mean_train_score']:.3f}")
 print(f"Mean CV fit time: {best_rf_row['mean_fit_time']:.3f} seconds")
 
 
-# ---------------------------------------------------------
 # Class-level cross-validation comparison
-# ---------------------------------------------------------
+
 
 class_names = ["Dropout", "Enrolled", "Graduate"]
 
@@ -327,9 +327,7 @@ for name, predictions, csv_name, figure_name in [
     plt.close()
 
 
-# ---------------------------------------------------------
-# Final Logistic Regression evaluation on held-out test set
-# ---------------------------------------------------------
+# Final Logistic Regression and Random Forest evaluation on held-out test set
 
 final_model = logistic_search.best_estimator_
 
@@ -341,10 +339,31 @@ start = time()
 y_pred = final_model.predict(X_test)
 prediction_time = time() - start
 
+
+# Random Forest timing for comparison
+final_rf_model = forest_search.best_estimator_
+
+start = time()
+final_rf_model.fit(X_train, y_train)
+rf_training_time = time() - start
+
+start = time()
+rf_y_pred = final_rf_model.predict(X_test)
+rf_prediction_time = time() - start
+
 accuracy = accuracy_score(y_test, y_pred)
 macro_precision = precision_score(y_test, y_pred, average="macro")
 macro_recall = recall_score(y_test, y_pred, average="macro")
 macro_f1 = f1_score(y_test, y_pred, average="macro")
+
+print("\nModel Timing Comparison")
+print("=" * 50)
+print(f"Logistic Regression training time: {training_time:.3f} seconds")
+print(f"Random Forest training time:       {rf_training_time:.3f} seconds")
+print()
+print(f"Logistic Regression prediction time: {prediction_time:.3f} seconds")
+print(f"Random Forest prediction time:       {rf_prediction_time:.3f} seconds")
+print("=" * 50)
 
 print("\nFinal Test Set Evaluation")
 print("=" * 50)
@@ -403,9 +422,9 @@ plt.savefig(FIGURES_DIR / "final_test_confusion_matrix.png", dpi=300)
 plt.close()
 
 
-# ---------------------------------------------------------
+
 # Logistic Regression coefficients
-# ---------------------------------------------------------
+
 
 preprocessor = final_model.named_steps["preprocessor"]
 classifier = final_model.named_steps["classifier"]
@@ -457,3 +476,4 @@ plt.title("Strongest Logistic Regression Associations with Dropout")
 plt.tight_layout()
 plt.savefig(FIGURES_DIR / "dropout_logistic_coefficients.png", dpi=300)
 plt.close()
+

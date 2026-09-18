@@ -1,0 +1,7 @@
+,precision,recall,f1-score,support
+Dropout,0.797,0.762,0.779,227.000
+Enrolled,0.505,0.417,0.457,127.000
+Graduate,0.798,0.870,0.832,354.000
+accuracy,0.754,0.754,0.754,0.754
+macro avg,0.700,0.683,0.690,708.000
+weighted avg,0.745,0.754,0.748,708.000

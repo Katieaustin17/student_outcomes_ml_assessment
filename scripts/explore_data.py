@@ -4,9 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# ---------------------------------------------------------
+
 # Load data
-# ---------------------------------------------------------
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = PROJECT_ROOT / "data" / "raw" / "student_outcomes.csv"
@@ -20,9 +20,9 @@ print(f"Missing values: {df.isna().sum().sum()}")
 print(f"Duplicate rows: {df.duplicated().sum()}")
 
 
-# ---------------------------------------------------------
+
 # Target distribution
-# ---------------------------------------------------------
+
 
 class_order = ["Dropout", "Enrolled", "Graduate"]
 class_counts = df["Target"].value_counts().reindex(class_order)
@@ -43,9 +43,9 @@ plt.savefig(FIGURES_DIR / "target_distribution.png", dpi=300)
 plt.close()
 
 
-# ---------------------------------------------------------
+
 # Bivariate analysis
-# ---------------------------------------------------------
+
 
 numerical_features = [
     "Age at enrollment",
@@ -84,9 +84,9 @@ for feature, (title, filename) in plot_features.items():
     plt.close()
 
 
-# ---------------------------------------------------------
+
 # Selected categorical relationships
-# ---------------------------------------------------------
+
 
 categorical_checks = {
     "Tuition fees up to date": ["Not up to date", "Up to date"],

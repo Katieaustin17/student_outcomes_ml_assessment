@@ -21,9 +21,8 @@ from tensorflow.keras.layers import Dense, Dropout, Input
 from tensorflow.keras.models import Sequential
 
 
-# ---------------------------------------------------------
+
 # Reproducibility and folders
-# ---------------------------------------------------------
 
 np.random.seed(42)
 tf.random.set_seed(42)
@@ -36,9 +35,8 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# ---------------------------------------------------------
+
 # Load and prepare data
-# ---------------------------------------------------------
 
 df = pd.read_csv(DATA_PATH)
 
@@ -78,9 +76,9 @@ print(f"ANN training set:   {len(X_train)} samples")
 print(f"ANN validation set: {len(X_val)} samples")
 
 
-# ---------------------------------------------------------
+
 # Preprocessing
-# ---------------------------------------------------------
+
 
 categorical_features = [
     "Marital Status",
@@ -142,9 +140,9 @@ y_train_encoded = y_train.map(target_mapping).to_numpy()
 y_val_encoded = y_val.map(target_mapping).to_numpy()
 
 
-# ---------------------------------------------------------
+
 # Build and train ANN
-# ---------------------------------------------------------
+
 
 model = Sequential(
     [
@@ -175,9 +173,8 @@ history = model.fit(
 )
 
 
-# ---------------------------------------------------------
 # Validation evaluation
-# ---------------------------------------------------------
+
 
 probabilities = model.predict(X_val_processed, verbose=0)
 y_pred = np.argmax(probabilities, axis=1)
@@ -205,6 +202,33 @@ pd.DataFrame(
     }
 ).to_csv(OUTPUT_DIR / "ann_validation_metrics.csv", index=False)
 
+
+
+# Classification report
+
+
+report = classification_report(
+    y_val_encoded,
+    y_pred,
+    target_names=class_names,
+    output_dict=True
+)
+
+classification_df = pd.DataFrame(report).transpose()
+
+print("\nClassification Report:")
+print(classification_df.round(3))
+
+
+# Save classification report to CSV
+classification_df.to_csv(
+    OUTPUT_DIR / "ann_classification_report.csv",
+    index=True,
+    float_format="%.3f"
+)
+
+
+
 cm = confusion_matrix(y_val_encoded, y_pred)
 ConfusionMatrixDisplay(cm, display_labels=class_names).plot(cmap="Blues")
 plt.title("ANN Validation Confusion Matrix")
@@ -213,9 +237,9 @@ plt.savefig(FIGURES_DIR / "ann_validation_confusion_matrix.png", dpi=300)
 plt.close()
 
 
-# ---------------------------------------------------------
+
 # Training history
-# ---------------------------------------------------------
+
 
 plt.figure(figsize=(7, 5))
 plt.plot(history.history["loss"], label="Training loss")
